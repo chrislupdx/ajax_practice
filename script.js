@@ -1,16 +1,15 @@
-// function fetch_ism() { 
-// console.log("we're all gonna die")
+function fetch_ism() {
+	fetch('https://dog.ceo/api/breeds/image/random',{
+		// mode : 'no-cors',
+		// dataType: 'json',
+	})
+	.then(function(response) {
+	   return response.json()
+	 })
+	.then(function(response) {
+	   console.log(response)
+	 })
+	.catch(error => console.error(error));
+}
 
-fetch('http://hipsterjesus.com/api/', {
-  mode: 'no-cors' 
-})
-.then(function(response) {
-    return response.json();
-  })
-  .then(function(myJson) {
-    console.log(myJson)
-  });
-  .catch(error => console.error(error));
-
-// };
 fetch_ism();
