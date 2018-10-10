@@ -5,11 +5,18 @@ function fetch_ism() {
 	})
 	.then(function(response) {
 	   return response.json()
+	   document.getElementById("hipsterisms")
 	 })
 	.then(function(response) {
 	   console.log(response)
+	   document.getElementById('dog').src = response.message
+ 
 	 })
 	.catch(error => console.error(error));
+
 }
 
+
+
 fetch_ism();
+
